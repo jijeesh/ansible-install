@@ -1,0 +1,18 @@
+---
+- name: Install dependencies
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - software-properties-common
+# add ansible repository for Ubuntu
+- apt_repository:
+    repo: 'ppa:ansible/ansible'
+    update_cache: yes
+
+- name: install Ansible
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - ansible

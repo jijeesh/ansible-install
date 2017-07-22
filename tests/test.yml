@@ -1,0 +1,5 @@
+---
+- hosts: melbin
+  remote_user: root
+  roles:
+    - ansible-install

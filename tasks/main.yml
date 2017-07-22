@@ -1,0 +1,4 @@
+---
+# tasks file for ansible-install
+- name: Install Ansible for OS
+  include: "os_family/{{ ansible_distribution }}.yml"
